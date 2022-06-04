@@ -20,10 +20,13 @@
 //     let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 //     let arr = enterWords.split(" ");
 //     let results = []
+//     console.log(nums);
+//     console.log (arr);
 //     for (let i = 0; i < arr.length ; i++) {
-//     if (arr.includes(nums)) {
+//     if (arr.includes(nums[i])) {
 //         results[i].push(arr[i]);
 //         console.log(results);
+      
 //     }
 //     return results = " ";}
 // };
@@ -31,23 +34,21 @@
 // findNumber(enterWords);
 
 
-let product = [
-{   "id":"1",
-    "name":"bread",
-    "count":2,
-    "price":25
-},
-{   "id":"2",
-    "name":"butter",
-    "count":1,
-    "price":55
-},
-{   "id":"3",
-    "name":"mikl",
-    "count":4,
-    "price":30
-}];
+let product = [{
+        "name": "bread",
+        "count": 2,
+        "price": 25
+    },
+    {
+        "name": "butter",
+        "count": 1,
+        "price": 55
+    },
+    {
+        "name": "milk",
+        "count": 4,
+        "price": 30
+    }
+];
 let list = Object.entries(product);
-
-
 console.log(list);
