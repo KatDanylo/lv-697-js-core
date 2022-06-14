@@ -1,4 +1,44 @@
 body{
     background: #f1f1f1;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+}
+.light{
+    background-color: darkgray;
+    height: 181px;
+    width: 64px;
+    margin: 0 auto;
+    border: solid 2px black;
+}
+.circle{
+    border-radius: 50%;
+    border: solid 2px black;
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+}
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+}
+.green{
+    background-color: green;
+}
+.btn_light{
+    padding: 17px;
+    text-align: center;
+}
+.palette{
+    display: grid;
+    grid-template-columns:  repeat(10, 30px);
+    /* grid-template-rows:  repeat(10, 1fr) 20px; */
+
 }
