@@ -1,20 +1,23 @@
 // const btnPlus = document.getElementById('plus');
 // const btnMinus = document.getElementById('minus');
-// const inp = document.getElementById('result');
-// let currentCount = +inp.value;
+// const inp = document.getElementById('result').innerHTML;
+// let currentCount;
+// console.log(inp);
+
 
 // function plusCount(currentCount) {
 //     return currentCount ++;
 // }
 
 // function minusCount(currentCount) {
+//     if(currentCount<0){currentCount=0}
 //     return currentCount --;
 // }
 
 
 // btnPlus.addEventListener('click', plusCount);
 // btnMinus.addEventListener('click', minusCount);
-// inp.textContent = currentCount;
+// inp.innerHTML = currentCount;
     
 
 

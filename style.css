@@ -3,11 +3,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
+#plus, #minus{
+    padding: 8px;
+    text-align: center;
+}
 .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
     padding: 20px 50px;
+    
 }
 .light{
     background-color: darkgray;
@@ -32,7 +35,7 @@ body{
 .green{
     background-color: green;
 }
-.btn_light{
+.btn_light, .btn {
     padding: 17px;
     text-align: center;
 }
@@ -41,4 +44,24 @@ body{
     grid-template-columns:  repeat(10, 30px);
     /* grid-template-rows:  repeat(10, 1fr) 20px; */
 
+}
+
+.homework7{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.modal{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    background-color: chartreuse;
+    border: 5px darkgreen solid;
+}
+.visible{
+    display: block;
 }
