@@ -41,4 +41,8 @@ function getRandomColour(){
 return colour;
 }
 console.log( getRandomColour());
+
+function writeColour(){
+    
+}
 })();
