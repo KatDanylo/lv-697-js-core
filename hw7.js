@@ -42,7 +42,4 @@ return colour;
 }
 console.log( getRandomColour());
 
-function writeColour(){
-    
-}
 })();
