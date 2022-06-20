@@ -42,4 +42,5 @@ return colour;
 }
 console.log( getRandomColour());
 
+
 })();
