@@ -2,12 +2,13 @@ const inp = document.querySelector('#marker_text');
 const out = document.querySelector('#out_marker_text');
 let count = 0;
 class Marker {
-    constructor(colour, percentInk) {
-        colour = this.colour;
+    constructor(color, percentInk) {
+        color = this.color;
         percentInk = this.percentInk;
     }
     print() {
-        console.log(`this text must be ${colour} colour`);
+       //console.log(`this text must be ${colour} colour`);
+        inp.style.color = this.color;
     };
 
     static countSign(percentInk) {
@@ -20,8 +21,36 @@ class Marker {
 inp.addEventListener('input', ()=>{sumSign});
 
 function sumSign(count) {
-    (inp.value = ' ' ? count = count : count++)
-    return count;
+    return  (inp.value = ' ' ? count = count : count++)
 }
 
 out.textContent = count;
+const redMarker = new Marker('red', 100);
+redMarker.print();
+
+
+
+
+
+class CircleDescribe {
+    constructor(r){
+        r = this.r;
+    }
+    get d (){
+        return this.r*2;
+    }
+    // set (){
+    //     return this.r;
+    // }
+    cirleLenght(){
+        return Math.PI*this.d
+    }
+    area(){
+        return Math.PI*(this.r*this.r);
+    }
+}
+
+const circle1 = new CircleDescribe(7);
+console.log(circle1.area());
+
+
