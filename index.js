@@ -1,5 +1,5 @@
-const inp =  document.querySelector('#marker_text');
-const out =  document.querySelector('#out_marker_text');
+const inp = document.querySelector('#marker_text');
+const out = document.querySelector('#out_marker_text');
 let count = 0;
 class Marker {
     constructor(colour, percentInk) {
@@ -17,15 +17,11 @@ class Marker {
         return percentInk - 0.5;
     }
 }
-inp.addEventListener('input', sumSign);
-function sumSign (count){
-    (inp.value =' '? count=count: count++)
+inp.addEventListener('input', ()=>{sumSign});
+
+function sumSign(count) {
+    (inp.value = ' ' ? count = count : count++)
     return count;
 }
 
 out.textContent = count;
-
-
-
-
-
