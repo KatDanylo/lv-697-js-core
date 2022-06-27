@@ -6,27 +6,33 @@ class CircleDescribe {
     get d (){
         return this.r*2;
     }
-    // set r(newR){
-    //     return this.r = newR
+    // set r(r){
+    //     return this.r = r;
     // }
     set d(newD){
         return this.d = newD;
     }
     cirleLenght(){
-        return Math.PI*this.d
+        return Math.PI*this.d;
     }
     area(){
         return Math.PI*(this.r*this.r);
     }
 }
-const inpR = document.querySelector('#radius');
-const outR = document.querySelector('#result');
+const outRadius = document.querySelector('#out-radius');
+const outDiametr = document.querySelector('#diametr');
+const outArea = document.querySelector('#area');
+const outCircleLenght = document.querySelector('#circle-lenght');
+const count = document.querySelector('.count');
 
-inpR.addEventListener('input',() => {});
+count.addEventListener('click',countCicleParams);
 
-
-const circle1 = new CircleDescribe(82);
-console.log(`diametr = ${circle1.d}, area = ${circle1.area()}, circle lenght =  ${circle1.cirleLenght()}, radius = ${circle1.r}`);
-const circle2 = new CircleDescribe(8);
-console.log(circle2);
-outR.innerHTML = circle1.area();
+function countCicleParams(){
+    let inpR = +document.querySelector('#inp-radius').value;
+    const circle = new CircleDescribe(inpR);
+    console.log(circle);
+    outRadius.innerHTML = circle.r;
+    outDiametr.innerHTML = circle.d;
+    outArea.innerHTML = circle.area();
+    outCircleLenght.innerHTML = circle.cirleLenght();
+}
