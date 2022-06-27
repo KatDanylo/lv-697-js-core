@@ -16,3 +16,7 @@ body{
 .res>p{
     border: 3px solid salmon;
 }
+#out_marker_text{
+    width: 100px;
+    height: auto;
+}

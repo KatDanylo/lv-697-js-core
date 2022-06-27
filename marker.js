@@ -3,33 +3,39 @@ const out = document.querySelector('#out_marker_text');
 //const bntColor = document.querySelector('.create-color-input');
 const createMarker = document.querySelector('.add-marker');
 class Marker {
-    constructor(color, percentInk) {
-        color = this.color;
-        percentInk = this.percentInk;
+    constructor( color,percentInk) {
+        this.color = color;
+        this.percentInk = percentInk;
+    // constructor(options) {
+    //     this.color = this.options;
+    //     this.percentInk = this.options;
     }
     // set percentInk(newValue){
     //     return this.percentInk=newValue;
     // }
     print() {
-        //console.log(`this text must be ${color} color`);
-        //inp.style.color = 'color';
+        out.style.background = this.color;
     };
 }
+const inpWithColor = document.getElementById('color-palitra');
+
+
+inpWithColor.addEventListener('change', updateColor);
+    function updateColor(event){
+        var colorInp;
+        createMarker.style.background = event.target.value;
+        return colorInp = event.target.value;  
+    } 
+console.log(colorInp);
+
 createMarker.addEventListener('click' , addNewMarker);
 function addNewMarker (){
-    let colorInp;
     const percentInk = +document.querySelector('#percentInk').value;
     const marker = new Marker(colorInp, percentInk)
-    console.log(marker , percentInk, colorInp);
-
-const inpColor = document.getElementById('color-palitra');
-
-inpColor.addEventListener('change', updateColor);
-    function updateColor(e){
-        createMarker.style.color = e.target.value;
-        return colorInp = e.target.value;
-    }
+    console.log(Marker );
 }
+
+
 
 /*bntColor.addEventListener('click', createInpColor,{'once': true});
 
@@ -41,12 +47,13 @@ function createInpColor(){
 }*/
 
 
-let str = inp.value;
-inp.addEventListener('input', ()=>{console.log(inp.value,typeof( inp.value))});
+let str = String(inp.value);
+inp.addEventListener('input', countSign);
 
 
 function countSign(str) {   
     let strWithoutSpace = str.match(/\S/g);
+    console.log(strWithoutSpace)
     return strWithoutSpace.length * 0.5;
 }
 
