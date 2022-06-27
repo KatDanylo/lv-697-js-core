@@ -10,7 +10,8 @@
 <body>
     <div class="marker">
         <input type="text" id="marker_text" placeholder="Write your text here">
-        <button class="create-color-input"> Choose color here  </button>
+        <input type="color" id="color-palitra" value="#000000">
+        <!-- <button class="create-color-input"> Choose color here  </button> -->
         <input type="number" name="percentInk" id="percentInk" min="0" max="100">
         <button class="add-marker">Add marker</button>
         <span type="text" id="out_marker_text"> </span>
@@ -18,7 +19,7 @@
     <div class="circle">
         <input type="number" min="0" id="inp-radius">
         <button class="count">Count</button>
-        <div>
+        <div class="res">
         Radius: <p id="out-radius"></p>
         Diametr: <p id="diametr"></p>
         Area:<p id="area"></p>

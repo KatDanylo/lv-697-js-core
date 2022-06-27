@@ -1,9 +1,7 @@
 const inp = document.querySelector('#marker_text');
 const out = document.querySelector('#out_marker_text');
-const bntColor = document.querySelector('.create-color-input');
-const percentInk = document.querySelector('#percentInk').value;
+//const bntColor = document.querySelector('.create-color-input');
 const createMarker = document.querySelector('.add-marker');
-const inpColor = document.getElementById('color-palitra');
 class Marker {
     constructor(color, percentInk) {
         color = this.color;
@@ -19,23 +17,29 @@ class Marker {
 }
 createMarker.addEventListener('click' , addNewMarker);
 function addNewMarker (){
+    let colorInp;
+    const percentInk = +document.querySelector('#percentInk').value;
     const marker = new Marker(colorInp, percentInk)
-    console.log(marker);
+    console.log(marker , percentInk, colorInp);
+
+const inpColor = document.getElementById('color-palitra');
+
+inpColor.addEventListener('change', updateColor);
+    function updateColor(e){
+        createMarker.style.color = e.target.value;
+        return colorInp = e.target.value;
+    }
 }
 
-bntColor.addEventListener('click', createInpColor,{'once': true});
+/*bntColor.addEventListener('click', createInpColor,{'once': true});
 
 function createInpColor(){
     let inpColor = document.createElement('INPUT');
     inpColor.setAttribute("type","color");
     inpColor.setAttribute("id","color-palitra");
     bntColor.appendChild(inpColor);
-}
-inpColorG.addEventListener('change', updateColor);
-function updateColor(e){
-    bntColor.style.color = e.target.value;
-    return colorInp = e.target.value;
-}
+}*/
+
 
 let str = inp.value;
 inp.addEventListener('input', ()=>{console.log(inp.value,typeof( inp.value))});
