@@ -6,8 +6,8 @@ class CircleDescribe {
     get d (){
         return this.r*2;
     }
-    // set r(r){
-    //     return this.r = r;
+    // set r(_r){
+    //  this.r = _r;
     // }
     set d(newD){
         return this.d = newD;
